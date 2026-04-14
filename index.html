@@ -3,25 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AMAF - Église Adventiste Ankadirano</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="header">
-        <div class="logo"></div>
-        <div class="navbar">
-            <ul>
-                <li class="accueil">Accueil</li>
-                <li class="contact">Contact</li>
-                <li class="a-propos">A propos</li>
-                <li class="feed-back">Feed-back</li>
-            </ul>
-        </div>
-        <div class="main">
 
+    <header>
+        <div class="logo">
+            <img src="logo/logo.jpg" alt="Logo AMAF Ankadirano" class="logo-img">
         </div>
-        <div class="footer">
-            
+        <nav>
+            <a href="#a-propos" class="nav-link">Accueil</a>
+            <a href="#a-propos" class="nav-link">À Propos</a>
+            <a href="#horaires" class="nav-link">Horaires</a>
+            <a href="#" class="nav-link">Contact</a>
+        </nav>
+    </header>
+    <div class="main">
+<section class="hero" id="a-propos">
+        <h1>Bienvenue à l'Église Adventiste ANKADIRANO Farafangana</h1>
+        <p>Une communauté de foi Adventiste qui recueille chalereusement tous le monde en partageant l'amour et la bonté du Christ.</p>
+        <a href="#horaires" class="btn">Nos Rendez-vous</a>
+    </section>
+
+    <section id="horaires" class="programs">
+        <h2>Nos Programmes de Sabbat</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>École du Sabbat</h3>
+                <p>Samedi à 09h00</p>
+                <small>Étude interactive de la Bible</small>
+            </div>
+            <div class="card">
+                <h3>Culte d'Adoration</h3>
+                <p>Samedi à 11h00</p>
+                <small>Louange et Prédication</small>
+            </div>
         </div>
+
+        <h2 style="margin-top: 50px;">Réunions en Semaine</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Réunion de Prière</h3>
+                <p>Mercredi à 18h30</p>
+                <small>Moment spirituel en semaine</small>
+            </div>
+            <div class="card">
+                <h3>Réunion de Prière</h3>
+                <p>Vendredi à 18h30</p>
+                <small>Moment spirituel en semaine</small>
+            </div>
+        </div>
+    </section>
     </div>
+
+    <footer>
+        <p>&copy; 2025 Église Adventiste du Septième Jour - Ankadirano, Farafangana</p>
+        <p><i>"Préparer un peuple pour le retour du Christ"</i></p>
+    </footer>
+<script src="script.js"></script>
 </body>
 </html>
