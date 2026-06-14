@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
         /* Couleurs Officielles Adventistes */
         :root {
@@ -130,10 +130,10 @@
             .programs h2 { font-size: 1.5rem; }
         }
    
-=======
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
->>>>>>> c2b13cc50e5ea5f4a899cfd71d3bcb18117ddf6d
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
