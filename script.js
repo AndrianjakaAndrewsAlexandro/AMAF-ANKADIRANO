@@ -34,3 +34,23 @@
                 }
             });
         });
+
+        // Le menu hamburger et ses fonctions
+        const hamburger = document.getElementById("hamburger");
+        const menu_cache = document.getElementById("menu_cache");
+        const close_menu = document.getElementById("close_menu");
+        const overlay = document.getElementById("overlay");
+
+        function active_menu_cache(){
+            menu_cache.classList.add("active");
+            overlay.classList.add("active");
+        }
+        function desactive_menu_cache(){
+            menu_cache.classList.remove("active");
+            overlay.classList.remove("active");
+        }
+
+        hamburger.addEventListener("click", active_menu_cache);
+        close_menu.addEventListener("click", desactive_menu_cache);
+        overlay.addEventListener("click", desactive_menu_cache);
+
