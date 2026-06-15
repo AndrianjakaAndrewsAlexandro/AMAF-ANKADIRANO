@@ -139,7 +139,8 @@
 
         /*-------  Le menu caché dans hamburger*/
         #menu_cache.active{
-            right: 0px;
+            right: 15vw;
+            
         }
 
         #menu_cache{
@@ -155,24 +156,10 @@
             padding-top: 70px;
             gap: 0px;
             z-index: 100;
+            border: 1px solid var(--light-gray);
+            border-radius: 16px
         }
-
-        #menu_cache a{
-            color: var(--white);
-            text-align: center;
-            font-size: 25px;
-            text-decoration: none;
-            border-block: 2px solid var(--white);
-            padding-block: 20px;
-            width: 100%;
-            font-weight: 600;
-        }  
         
-        #menu_cache a:hover{
-            color: var(--blue-adv);
-            background-color: var(--white);
-            
-        }
         
         #close_menu{
             position: absolute;
@@ -181,6 +168,9 @@
             color: var(--white);
             font-size: 40px;
             cursor: pointer;
+            border: 1px solid var(--light-gray);
+            border-radius: 50%;
+            padding: 5px;
         }
 
         #hamburger{
@@ -209,6 +199,135 @@
             z-index: 50;
             border: 1px solid rgba(0, 45, 98, 0.6);
         }
+
+        .haut_menu_cache{
+            background-color: var(--blue-adv);
+            border-bottom: 1px solid var(--light-gray);
+            width: 100%;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: row;
+            gap: 30px;
+            padding-left: 30px;
+        }
+        
+
+        .haut_menu_cache img{
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        
+        }
+
+        .eglise_amaf{
+            font-weight: 600;
+            color: var(--white);
+        }
+
+        .ank_farafa{
+            color: var(--gold-adv);
+        }
+
+        .mada{
+            color: var(--gold-adv);
+            border:1px solid var(--gold-adv);
+            border-radius: 24px;
+            padding-inline: 5px;
+            padding-block: 2px;
+        }
+
+        .centre_menu_cache{
+            border-bottom: 1px solid var(--light-gray);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            height: 420px;
+            padding-top: 20px;
+        }
+
+        .centre_menu_cache.active{
+            border-bottom: 1px solid var(--light-gray);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            height: 440px;
+            padding-top: 20px;
+        }
+
+        .centre_menu_cache small{
+            color: #b4acac;
+            font-size: 16px;
+            margin-left: 30px;
+        }
+
+        .centre_menu_cache div{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        .nav_cache a{
+            position: relative;
+            width: 70vw;
+            padding-block: 20px;
+            color: var(--white);
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 600;
+            text-align: left;
+            padding-left: 30px;
+            align-items: center;
+        }
+
+        .nav_cache a.active{
+            position: relative;
+            width: 70vw;
+            padding-block: 20px;
+            color: var(--white);
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 600;
+            text-align: left;
+            padding-left: 30px;
+            align-items: center;
+            border-left: 2px solid var(--gold-adv);
+            background-color: rgba(255, 184, 0, 0.5);
+        }
+
+        .centre_menu_cache div a .ti{
+            background-color: rgba(153, 143, 143, 0.2);
+            color: var(--white);
+            font-size: 40px;
+            border: 1px solid #666;
+            border-radius: 8px;
+        }
+
+        #chevron{
+            font-size: 18px;
+            position: absolute;
+            right: 20px;
+            top: 38px;
+        }
+
+
+        .bas_menu_cache{
+            text-align: center;
+            align-items: center;
+            padding-top: 20px;
+        }
+
+        .bas_menu_cache p{
+            color: #b4acac;
+            font-size: 16px;;
+        }
+
+        .bas_menu_cache span{
+            color: var(--gold-adv);
+        }
+
         
         @media (max-width: 768px){
            #hamburger{
@@ -221,4 +340,8 @@
             cursor: pointer;
             z-index: 10;
             } 
+
+            #hamburger.desactive{
+                display: none;
+            }
         }

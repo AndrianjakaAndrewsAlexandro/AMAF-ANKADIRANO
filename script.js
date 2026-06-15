@@ -44,13 +44,24 @@
         function active_menu_cache(){
             menu_cache.classList.add("active");
             overlay.classList.add("active");
+            hamburger.classList.add("desactive")
         }
         function desactive_menu_cache(){
             menu_cache.classList.remove("active");
             overlay.classList.remove("active");
+            hamburger.classList.remove("desactive")
         }
 
         hamburger.addEventListener("click", active_menu_cache);
         close_menu.addEventListener("click", desactive_menu_cache);
         overlay.addEventListener("click", desactive_menu_cache);
 
+        // hover de navigation
+        const nav_hover = document.querySelectorAll(".nav_cache_a");
+
+
+        function hover_menu(){
+            nav_hover.classList.add("active");
+        }
+
+        nav_hover.addEventListener("mouseover", hover_menu);
