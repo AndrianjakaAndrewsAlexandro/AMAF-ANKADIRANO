@@ -1,4 +1,4 @@
-const CACHE_NAME = "advAnkApp-v1";
+const CACHE_NAME = "advAnkApp-v2";
 const urlsToCache = [
     "/",
     "/index.html",
