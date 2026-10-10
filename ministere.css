@@ -1,0 +1,275 @@
+
+
+        /* Couleurs Officielles Adventistes */
+        :root {
+            --blue-adv: #002D62;
+            --gold-adv: #FFB800;
+            --white: #e1e4d6;
+            --light-gray: #f4f4f4;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+        body { line-height: 1.6; color: #333; background-color: var(--white); }
+
+        .main { margin-top: 80px; }
+
+        /* Barre de navigation */
+        header {
+            background: var(--blue-adv);
+            color: var(--white);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .logo { font-weight: bold; font-size: 1.5rem; color: var(--gold-adv); display: flex; align-items: center; }
+        .logo-img { height: 60px; width: auto; max-width: 200px; object-fit: contain; }
+        
+        nav a { color: var(--white); text-decoration: none; margin-left: 40px; font-weight: 500; }
+        nav a:hover { color: var(--gold-adv); }
+
+        footer { background: #485E5B;
+             color: #faf8f8; 
+             text-align: center; 
+             padding: 20px;
+              font-size: 0.9rem; }
+
+        /* Responsive Mobile */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            header { flex-direction: column; gap: 15px; }
+            nav { display: none; } /* On cache le menu pour simplifier sur mobile */
+            .card { padding: 20px; }
+            .programs h2 { font-size: 1.5rem; }
+        }
+   
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /*-------  Le menu caché dans hamburger*/
+        #menu_cache.active{
+            display: flex;
+            
+        }
+
+        #menu_cache{
+            height: 100vh;
+            width: 90vw;
+            position: fixed;
+            margin: auto;
+            background-color: var(--blue-adv);
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 70px;
+            gap: 0px;
+            z-index: 100;
+            border: 1px solid var(--light-gray);
+            border-radius: 16px
+        }
+        
+        
+        #close_menu{
+            position: absolute;
+            top: 20px;
+            right: 10px;
+            color: var(--white);
+            font-size: 40px;
+            cursor: pointer;
+            border: 1px solid var(--light-gray);
+            border-radius: 50%;
+            padding: 5px;
+        }
+
+        #hamburger{
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 10px;
+            color: var(--white);
+            font-size: 40px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        #overlay{
+            display: none;
+        }
+        
+        #overlay.active{
+            display: block;
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 45, 98, 0.6);
+            z-index: 50;
+            border: 1px solid rgba(0, 45, 98, 0.6);
+        }
+
+        .haut_menu_cache{
+            background-color: var(--blue-adv);
+            border-bottom: 1px solid var(--light-gray);
+            width: 100%;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: row;
+            gap: 30px;
+            padding-left: 30px;
+        }
+        
+
+        .haut_menu_cache img{
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        
+        }
+
+        .eglise_amaf{
+            font-weight: 600;
+            color: var(--white);
+        }
+
+        .ank_farafa{
+            color: var(--gold-adv);
+        }
+
+        .mada{
+            color: var(--gold-adv);
+            border:1px solid var(--gold-adv);
+            border-radius: 24px;
+            padding-inline: 5px;
+            padding-block: 2px;
+        }
+
+        .centre_menu_cache{
+            border-bottom: 1px solid var(--light-gray);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            height: 70%;
+            padding-top: 20px;
+        }
+
+        .centre_menu_cache.active{
+            border-bottom: 1px solid var(--light-gray);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            height: 440px;
+            padding-top: 20px;
+        }
+
+        .centre_menu_cache small{
+            color: #b4acac;
+            font-size: 16px;
+            margin-left: 30px;
+        }
+
+        .centre_menu_cache div{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        .nav_cache a{
+            position: relative;
+            width: 70vw;
+            padding-block: 20px;
+            color: var(--white);
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 600;
+            text-align: left;
+            padding-left: 30px;
+            align-items: center;
+        }
+
+        .nav_cache a.active{
+            position: relative;
+            width: 70vw;
+            padding-block: 20px;
+            color: var(--white);
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 600;
+            text-align: left;
+            padding-left: 30px;
+            align-items: center;
+            border-left: 2px solid var(--gold-adv);
+            background-color: rgba(255, 184, 0, 0.5);
+        }
+
+        .centre_menu_cache div a .ti{
+            background-color: rgba(153, 143, 143, 0.2);
+            color: var(--white);
+            font-size: 40px;
+            border: 1px solid #666;
+            border-radius: 8px;
+        }
+
+        #chevron{
+            font-size: 18px;
+            position: absolute;
+            right: 20px;
+            top: 38px;
+        }
+
+
+        .bas_menu_cache{
+            text-align: center;
+            align-items: center;
+            padding-top: 20px;
+        }
+
+        .bas_menu_cache p{
+            color: #b4acac;
+            font-size: 16px;;
+        }
+
+        .bas_menu_cache span{
+            color: var(--gold-adv);
+        }
+
+        /*---------------RESPONSIVITE-------------------*/
+        @media (max-width: 768px){
+           #hamburger{
+            display: block;
+            position: fixed;
+            top: 20px;
+            right: 10px;
+            color: var(--white);
+            font-size: 40px;
+            cursor: pointer;
+            z-index: 10;
+            } 
+
+            #hamburger.desactive{
+                display: none;
+            }
+
+            .evenement_grid_container{
+                gap: 4vw;
+            }
+
+            .evenement_grid_item{
+                border-radius: 4vw;
+            }
+        }

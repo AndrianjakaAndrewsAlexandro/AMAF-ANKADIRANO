@@ -1,0 +1,21 @@
+{
+    "name": "AMAF Ankadirano",
+    "short_name": "amafAnk",
+    "start_url": "/index.html", 
+    "display": "standlone",
+    "background_color": "#FFFFFF",
+    "theme_color": "#002D62",
+    "icons": [
+        {
+        "src": "Images/LogoAdv_192x192.jpg",
+        "sizes": "192x192",
+        "type": "image/jpg"
+        },
+
+        {
+            "src": "Images/LogoAdv_512x512.jpg",
+            "sizes": "512x512",
+            "type": "image/jpg"
+        }
+    ]
+}

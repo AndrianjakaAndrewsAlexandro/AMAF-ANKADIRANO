@@ -1,0 +1,427 @@
+
+
+        /* Couleurs Officielles Adventistes */
+        :root {
+            --blue-adv: #002D62;
+            --gold-adv: #FFB800;
+            --white: #e1e4d6;
+            --light-gray: #f4f4f4;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+        body { line-height: 1.6; color: #333; background-color: var(--white); }
+
+        .main { margin-top: 80px; }
+
+        /* Barre de navigation */
+        header {
+            background: var(--blue-adv);
+            color: var(--white);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .logo { font-weight: bold; font-size: 1.5rem; color: var(--gold-adv); display: flex; align-items: center; }
+        .logo-img { height: 60px; width: auto; max-width: 200px; object-fit: contain; }
+        
+        nav a { color: var(--white); text-decoration: none; margin-left: 40px; font-weight: 500; }
+        nav a:hover { color: var(--gold-adv); }
+
+        /* Section Héro */
+        .hero {
+            background: linear-gradient(rgba(0,44,95,0.8), rgba(0,44,95,0.8)), url('https://unsplash.com');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+        }
+
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; color: var(--gold-adv); }
+        .hero p { font-size: 1.2rem; margin-bottom: 25px; max-width: 600px; }
+
+        .btn {
+            background: var(--gold-adv);
+            color: var(--blue-adv);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn:hover { background: var(--white); }
+
+        /* Section Programme (Grille) */
+        .programs { padding: 60px 5%; text-align: center; background: #fafafa; }
+        .programs h2 { color: var(--blue-adv); font-size: 2rem; margin-bottom: 40px; position: relative; padding-bottom: 15px; }
+        .programs h2::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 80px; height: 4px; background: linear-gradient(90deg, var(--gold-adv), var(--blue-adv)); border-radius: 2px; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: var(--light-gray);
+            padding: 30px 25px;
+            border-bottom: 5px solid var(--blue-adv);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 44, 95, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .logo-img {
+            border-radius: 50%;
+        }
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--blue-adv), var(--gold-adv));
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 25px rgba(0, 44, 95, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .card-icon {
+            display: none;
+        }
+        .card h3 { color: var(--blue-adv); margin-bottom: 10px; font-size: 1.3rem; }
+        .card p { font-weight: bold; color: var(--blue-adv); font-size: 1.1rem; margin-bottom: 8px; }
+        .card small { color: #666; font-size: 0.95rem; }
+
+        /* Section AMAF */
+        .amaf-section { background: var(--blue-adv); color: white; padding: 60px 5%; text-align: center; }
+        .amaf-section h2 { color: var(--gold-adv); margin-bottom: 15px; }
+
+        footer { background: #485E5B;
+             color: #faf8f8; 
+             text-align: center; 
+             padding: 20px;
+              font-size: 0.9rem; }
+
+        /* Responsive Mobile */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            header { flex-direction: column; gap: 15px; }
+            nav { display: none; } /* On cache le menu pour simplifier sur mobile */
+            .card { padding: 20px; }
+            .programs h2 { font-size: 1.5rem; }
+        }
+   
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /*-------  Le menu caché dans hamburger*/
+        #menu_cache.active{
+            display: flex;
+            
+        }
+
+        #menu_cache{
+            height: 100vh;
+            width: 90vw;
+            position: fixed;
+            margin: auto;
+            background-color: var(--blue-adv);
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 70px;
+            gap: 0px;
+            z-index: 100;
+            border: 1px solid var(--light-gray);
+            border-radius: 16px
+        }
+        
+        
+        #close_menu{
+            position: absolute;
+            top: 20px;
+            right: 10px;
+            color: var(--white);
+            font-size: 40px;
+            cursor: pointer;
+            border: 1px solid var(--light-gray);
+            border-radius: 50%;
+            padding: 5px;
+        }
+
+        #hamburger{
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 10px;
+            color: var(--white);
+            font-size: 40px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        #overlay{
+            display: none;
+        }
+        
+        #overlay.active{
+            display: block;
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 45, 98, 0.6);
+            z-index: 50;
+            border: 1px solid rgba(0, 45, 98, 0.6);
+        }
+
+        .haut_menu_cache{
+            background-color: var(--blue-adv);
+            border-bottom: 1px solid var(--light-gray);
+            width: 100%;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-direction: row;
+            gap: 30px;
+            padding-left: 30px;
+        }
+        
+
+        .haut_menu_cache img{
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        
+        }
+
+        .eglise_amaf{
+            font-weight: 600;
+            color: var(--white);
+        }
+
+        .ank_farafa{
+            color: var(--gold-adv);
+        }
+
+        .mada{
+            color: var(--gold-adv);
+            border:1px solid var(--gold-adv);
+            border-radius: 24px;
+            padding-inline: 5px;
+            padding-block: 2px;
+        }
+
+        .centre_menu_cache{
+            border-bottom: 1px solid var(--light-gray);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            height: 70%;
+            padding-top: 20px;
+        }
+
+        .centre_menu_cache.active{
+            border-bottom: 1px solid var(--light-gray);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            height: 440px;
+            padding-top: 20px;
+        }
+
+        .centre_menu_cache small{
+            color: #b4acac;
+            font-size: 16px;
+            margin-left: 30px;
+        }
+
+        .centre_menu_cache div{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        .nav_cache a{
+            position: relative;
+            width: 70vw;
+            padding-block: 20px;
+            color: var(--white);
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 600;
+            text-align: left;
+            padding-left: 30px;
+            align-items: center;
+        }
+
+        .nav_cache a.active{
+            position: relative;
+            width: 70vw;
+            padding-block: 20px;
+            color: var(--white);
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 600;
+            text-align: left;
+            padding-left: 30px;
+            align-items: center;
+            border-left: 2px solid var(--gold-adv);
+            background-color: rgba(255, 184, 0, 0.5);
+        }
+
+        .centre_menu_cache div a .ti{
+            background-color: rgba(153, 143, 143, 0.2);
+            color: var(--white);
+            font-size: 40px;
+            border: 1px solid #666;
+            border-radius: 8px;
+        }
+
+        #chevron{
+            font-size: 18px;
+            position: absolute;
+            right: 20px;
+            top: 38px;
+        }
+
+
+        .bas_menu_cache{
+            text-align: center;
+            align-items: center;
+            padding-top: 20px;
+        }
+
+        .bas_menu_cache p{
+            color: #b4acac;
+            font-size: 16px;;
+        }
+
+        .bas_menu_cache span{
+            color: var(--gold-adv);
+        }
+
+        /*-------------------SECTION EVENEMENT-------------------*/
+        .section_evenement{
+            background-color: var(--light-gray);
+        }
+
+        .evenement_titre{ 
+            font-size: 2rem;
+            padding-top: 10px; 
+            color: var(--blue-adv); 
+            text-align: center;
+        }
+
+        .evenement_grid_container{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            align-items: center;
+            justify-content: center;
+            margin: 1vw;
+            gap: 2vw;
+            padding-inline: 4vw;
+        }
+
+        .evenement_grid_item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid transparent;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            background-color: #FFFFFF;
+            border-radius: 1vw;
+            overflow: hidden;
+        }
+
+        .evenement_img_container{
+            position: relative;
+            width: 100%;
+            height: 40%;
+            object-fit: cover;
+        }
+
+        .evenement_img_container img{
+            width: 100%;
+            height: 40%;
+        }
+
+        .evenement_date{
+            position: absolute;
+            left: 12px;
+            bottom: 20px;
+            z-index: 100;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.8);
+            padding-inline: 1vw;
+            padding-block: 0.2vw;
+            border-radius: 1.5vw;
+        }
+
+        .evenement_info{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: #FFFFFF;
+            padding: 1vw;
+        }
+
+        .evenement_title{
+            font-weight: bolder;
+        }
+ 
+
+        /*---------------RESPONSIVITE-------------------*/
+        @media (max-width: 768px){
+           #hamburger{
+            display: block;
+            position: fixed;
+            top: 20px;
+            right: 10px;
+            color: var(--white);
+            font-size: 40px;
+            cursor: pointer;
+            z-index: 10;
+            } 
+
+            #hamburger.desactive{
+                display: none;
+            }
+
+            .evenement_grid_container{
+                gap: 4vw;
+            }
+
+            .evenement_grid_item{
+                border-radius: 4vw;
+            }
+        }
