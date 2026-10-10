@@ -423,5 +423,6 @@
 
             .evenement_grid_item{
                 border-radius: 4vw;
+                padding-inline: 4vw;
             }
         }
