@@ -8,8 +8,8 @@ const urlsToCache = [
     "./ministere.css",
     "./manifest.json",
     "./logo/logo.jpg",
-    "./Images/LogoAdv_192x192.jpg",
-    "./Images/LogoAdv_512x512.jpg"
+    "./Images/icon-192.png",
+    "./Images/icon-512.png"
 ];
 
 // Installation de service worker
