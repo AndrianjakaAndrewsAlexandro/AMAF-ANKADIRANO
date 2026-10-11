@@ -59,9 +59,13 @@
         // hover de navigation
         const nav_hover = document.querySelectorAll(".nav_cache_a");
 
+        nav_hover.forEach(lien => {
+            lien.addEventListener("mouseenter", () => {
+                lien.classList.add("active");
+            });
+            lien.addEventListener("mouseleave", () => {
+                lien.classList.remove("active");
+            });
+        });
 
-        function hover_menu(){
-            nav_hover.classList.add("active");
-        }
-
-        nav_hover.addEventListener("mouseover", hover_menu);
+        
