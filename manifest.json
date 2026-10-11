@@ -1,8 +1,11 @@
-{
+{   
+    "id": "./",
     "name": "AMAF Ankadirano",
-    "short_name": "amafAnk",
-    "start_url": "/index.html", 
-    "display": "standlone",
+    "short_name": "AMAF Ank",
+    "description": "Site officiel de l'eglise Adventiste AMAF Ankadirano",
+    "start_url": "./index.html", 
+    "scope": "./",
+    "display": "standalone",
     "background_color": "#FFFFFF",
     "theme_color": "#002D62",
     "icons": [
