@@ -17,7 +17,8 @@ const urlsToCache = [
     "./Images/AMAF_Ankadirano.jpg",
     "./Images/AMAF_Ankadirano_outside.jpg",
     "./Images/AMAF_log.jpg",
-    "./Images/sekoly_sabata.png"
+    "./Images/sekoly_sabata.png",
+    "./Images/mja.jpg"
 ];
 
 // Installation de service worker
