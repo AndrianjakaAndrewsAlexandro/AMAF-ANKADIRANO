@@ -398,6 +398,62 @@
         .evenement_title{
             font-weight: bolder;
         }
+
+        .div_installer_appli{
+            display: block;
+            position: absolute;
+            margin: auto;
+            top: 120px;
+            margin-inline: 4vw;
+            z-index: 100;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.8);
+            padding-inline: 3vw;
+            padding-block: 4vw;
+            border-radius: 1.5vw;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .div_installer_appli img{
+            display: block;
+            margin: auto;
+            border-radius: 1.5vw;
+            width: 62px;
+            height: 62px;
+            object-fit: cover;
+        }
+
+        #installer_apk{
+            display: block;
+            margin: auto;
+            padding: 2vw;
+            border-radius: 1.5vw;
+            border: 2px solid var(--blue-adv);
+            font-size: calc(1.2vw + 12px);
+            background-color: var(--blue-adv);
+            color: var(--light-gray);
+            transition: 1.2s;
+            margin-top: 20px;
+        }
+
+        #installer_apk:hover{
+            border: 2px solid var(--gold-adv);
+            background-color: var(--gold-adv);
+            color: var(--blue-adv);
+        }
+
+        #close_div_installer{
+            display: block;
+            margin: auto;
+            color: black;
+            border: none;
+            cursor: pointer;
+            margin-top: 6px;
+        }
+
+        #close_div_installer:hover{
+            text-decoration: underline;
+        }
  
 
         /*---------------RESPONSIVITE-------------------*/

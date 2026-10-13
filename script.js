@@ -1,4 +1,4 @@
-
+        
         // Smooth scroll pour tous les liens de navigation
         document.querySelectorAll('a.nav-link').forEach(link => {
             link.addEventListener('click', function(e) {
@@ -67,5 +67,58 @@
                 lien.classList.remove("active");
             });
         });
+
+        // Bouton pour l'installation de l'appli web
+        let deferredPrompt = null;
+
+        // On écoute l'événement SANS appeler preventDefault()
+        // → le mini-bar de Chrome s'affiche normalement
+        window.addEventListener('beforeinstallprompt', (e) => {
+        deferredPrompt = e;
+
+        const btn = document.getElementById('installer_apk');
+        if (btn) {
+            btn.style.display = 'block'; // ou 'inline-block'
+        }
+        });
+
+        // Clic sur ton bouton → lance aussi l'installation
+        document.getElementById('installer_apk')?.addEventListener('click', async () => {
+        if (!deferredPrompt) {
+            alert("L'installation n'est pas disponible pour le moment.");
+            return;
+        }
+
+        deferredPrompt.prompt();
+
+        const { outcome } = await deferredPrompt.userChoice;
+
+        if (outcome === 'accepted') {
+            console.log('Application installée');
+        } else {
+            console.log('Installation refusée');
+        }
+
+        deferredPrompt = null;
+
+        const btn = document.getElementById('installer_apk');
+        if (btn) btn.style.display = 'none';
+        });
+
+        // Cache le bouton si l'appli est déjà installée
+        window.addEventListener('appinstalled', () => {
+        const btn = document.getElementById('installer_apk');
+        if (btn) btn.style.display = 'none';
+        deferredPrompt = null;
+        });
+
+
+        // Bouton de fermeture du div d'installation
+        const close_div_installer = document.getElementById("close_div_installer");
+        const div_installer_appli = document.getElementById("div_installer_appli");
+        close_div_installer.addEventListener("click", () => {
+            div_installer_appli.style.display = "none";
+        })
+
 
         

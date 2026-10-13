@@ -9,7 +9,15 @@ const urlsToCache = [
     "./manifest.json",
     "./logo/logo.jpg",
     "./Images/icon-192.png",
-    "./Images/icon-512.png"
+    "./Images/icon-512.png",
+    "./Images/evenement_pastoral.jpg",
+    "./Images/Choral_LMCAF.jpg",
+    "./Images/Minenf.jpg",
+    "./Images/Mifem.jpg",
+    "./Images/AMAF_Ankadirano.jpg",
+    "./Images/AMAF_Ankadirano_outside.jpg",
+    "./Images/AMAF_log.jpg",
+    "./Images/sekoly_sabata.png"
 ];
 
 // Installation de service worker
