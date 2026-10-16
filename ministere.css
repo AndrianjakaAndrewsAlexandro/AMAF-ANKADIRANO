@@ -298,6 +298,15 @@
             font-weight: bolder;
         }
 
+        .section_bible{
+            width: 90vw;
+            padding-inline: 0;
+        }
+
+        #texte-container{
+            width: 90%;
+        }
+
 
         /*---------------RESPONSIVITE-------------------*/
         @media (max-width: 768px){
