@@ -122,6 +122,7 @@
 
         // Affichage du chapitre de la bible à lire
         // la fonction de ce code
+
 function lire(){
     liste1 = ["Genesisy", "Eksodosy", "Levitikosy", "Nomery", "Deotornomia", "Josoa", "Mpitsara", "Rota", 
     "Samoela I", "Samoela II", "Mpanjaka I", "Mpanjaka II", "Tantara I", "Tantara II", "Ezra", "Nehemia", 
@@ -168,8 +169,14 @@ function lire(){
     return a_lire
 }
 
-const div_lire_bible = document.getElementById("div_lire_bible");
-div_lire_bible.textContent += lire();
-        
+
+const a_lire = lire();
+
+// Montrer dans l'acceuil
+const p_lire_bible = document.getElementById("p_lire_bible");
+p_lire_bible.textContent += a_lire;
+
+
+
 
         
